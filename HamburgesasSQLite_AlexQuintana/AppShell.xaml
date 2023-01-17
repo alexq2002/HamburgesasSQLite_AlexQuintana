@@ -10,5 +10,5 @@
     <ShellContent
         Title="Hamburguesa"
         ContentTemplate="{DataTemplate views:BurgerListPageAQ}"
-        Route="BurgerList" />
+        Route="burgerList" />
 </Shell>

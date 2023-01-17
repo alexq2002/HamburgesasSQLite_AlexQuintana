@@ -7,6 +7,8 @@ public partial class BurgerItemPageAQ : ContentPage
 {
     BurgerAQ Item = new BurgerAQ();
     bool _flag;
+
+
     public BurgerItemPageAQ()
 	{
 		InitializeComponent();

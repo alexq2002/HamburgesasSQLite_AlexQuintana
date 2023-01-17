@@ -5,7 +5,9 @@
              x:Class="HamburgesasSQLite_AlexQuintana.Views.BurgerListPageAQ"
              Title="BurgerListPageAQ">
     <Grid RowDefinitions="*,Auto">
-        <CollectionView x:Name="burgerList">
+        <CollectionView x:Name="burgerList"
+                SelectionMode="Single"
+                SelectionChanged="OnCollectionViewSelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:BurgerAQ">
                     <Grid>

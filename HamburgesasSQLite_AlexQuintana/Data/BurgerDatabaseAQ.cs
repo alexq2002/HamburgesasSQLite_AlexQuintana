@@ -27,6 +27,7 @@ namespace HamburgesasSQLite_AlexQuintana.Data
         }
         public int AddNewBurger(BurgerAQ burger)
         {
+            
             Init();
             int result = conn.Insert(burger);
             return result;
