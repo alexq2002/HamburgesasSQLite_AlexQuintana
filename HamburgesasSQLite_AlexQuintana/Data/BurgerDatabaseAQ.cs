@@ -27,10 +27,15 @@ namespace HamburgesasSQLite_AlexQuintana.Data
         }
         public int AddNewBurger(BurgerAQ burger)
         {
-            
             Init();
-            int result = conn.Insert(burger);
-            return result;
+            if (burger.Id != 0)
+            {
+                return conn.Update(burger);
+            }
+            else
+            {
+                return conn.Insert(burger);
+            }
         }
         public List<BurgerAQ> GetAllBurgers()
         {
