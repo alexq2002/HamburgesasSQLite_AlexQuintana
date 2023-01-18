@@ -31,8 +31,13 @@ public partial class BurgerItemPageAQ : ContentPage
 
     private void OnDeleteClicked(object sender, EventArgs e)
     {
-        if (App.BurgerRepo.DeleteItem(Item) != -100000) 
+        if (App.BurgerRepo.DeleteItem(Item) != -639)
+        {
             App.BurgerRepo.DeleteItem(Item);
             Shell.Current.GoToAsync("..");
+        }
+        else
+        {
+        }
     }
 }

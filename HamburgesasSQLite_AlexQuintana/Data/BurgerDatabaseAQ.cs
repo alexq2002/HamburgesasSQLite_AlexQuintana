@@ -53,7 +53,7 @@ namespace HamburgesasSQLite_AlexQuintana.Data
             }
             else
             {
-                return -100000;
+                return -639;
             }        
         }
     }
