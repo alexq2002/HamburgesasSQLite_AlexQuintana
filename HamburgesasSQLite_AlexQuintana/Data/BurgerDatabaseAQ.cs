@@ -43,5 +43,18 @@ namespace HamburgesasSQLite_AlexQuintana.Data
             List<BurgerAQ> burgers = conn.Table<BurgerAQ>().ToList();
             return burgers;
         }
+
+        public int DeleteItem(BurgerAQ item)
+        {
+            Init();
+            if (item.Id != 0)
+            {
+                return conn.Delete(item);
+            }
+            else
+            {
+                return -100000;
+            }        
+        }
     }
 }

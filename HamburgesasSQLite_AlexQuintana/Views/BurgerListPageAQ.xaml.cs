@@ -12,7 +12,10 @@ public partial class BurgerListPageAQ : ContentPage
 
     public void OnItemAddedAQ(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(BurgerItemPageAQ));
+        Shell.Current.GoToAsync(nameof(BurgerItemPageAQ), true, new Dictionary<string, object>
+        {
+            ["Item"] = new BurgerAQ()
+        });
     }
 
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
@@ -21,11 +24,11 @@ public partial class BurgerListPageAQ : ContentPage
         burgerList.ItemsSource = burger;
     }
 
-    private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(BurgerItemPageAQ), true, new Dictionary<string, object>
+        await Shell.Current.GoToAsync(nameof(BurgerItemPageAQ), true, new Dictionary<string, object>
         {
-            ["Item"] = new BurgerAQ()
+            ["Item"] = (BurgerAQ)e.CurrentSelection.FirstOrDefault()
         });
     }
 }

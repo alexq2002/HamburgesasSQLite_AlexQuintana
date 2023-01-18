@@ -28,4 +28,11 @@ public partial class BurgerItemPageAQ : ContentPage
 	{
         Shell.Current.GoToAsync("..");
     }
+
+    private void OnDeleteClicked(object sender, EventArgs e)
+    {
+        if (App.BurgerRepo.DeleteItem(Item) != -100000) 
+            App.BurgerRepo.DeleteItem(Item);
+            Shell.Current.GoToAsync("..");
+    }
 }

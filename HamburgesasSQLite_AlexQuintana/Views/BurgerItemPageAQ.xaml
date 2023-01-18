@@ -16,6 +16,8 @@
             <CheckBox IsChecked="{Binding WithExtraCheese}"/>
             <Button Text="Guardar"
                 Clicked="OnSaveClicked" />
+            <Button Text="Borrar"
+                Clicked="OnDeleteClicked" />
             <Button Text="Cancelar"
                 Clicked="OnCancelClicked" />
         </VerticalStackLayout>
