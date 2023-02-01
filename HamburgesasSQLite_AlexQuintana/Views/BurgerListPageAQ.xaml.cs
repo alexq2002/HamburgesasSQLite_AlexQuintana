@@ -14,7 +14,7 @@ public partial class BurgerListPageAQ : ContentPage
     {
         Shell.Current.GoToAsync(nameof(BurgerItemPageAQ), true, new Dictionary<string, object>
         {
-            ["Item"] = new BurgerAQ()
+            ["Item"] = new BurgerAQ(),
         });
     }
 
